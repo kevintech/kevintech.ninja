@@ -1,0 +1,173 @@
+@import "../node_modules/flexiblegs-stylus/flexiblegs-stylus"
+
+millennial = #025D8C
+walken = #DADBDE
+world = #02517A
+
+vendor(prop, args)
+	-webkit-{prop} args
+	   -moz-{prop} args
+	    -ms-{prop} args
+	     -o-{prop} args
+	        {prop} args
+
+animation()
+	vendor("animation", arguments)
+
+border-radius()
+	vendor("border-radius", arguments)
+
+box-shadow()
+	vendor("box-shadow", arguments)
+
+text-shadow()
+	vendor("text-shadow", arguments)
+
+transition()
+	vendor("transition", arguments)
+
+transform()
+	vendor("transform", arguments)
+
+transform-origin()
+	vendor("transform-origin", arguments)
+
+user-select()
+	vendor("user-select", arguments)
+
+background-linear-gradient(startPoint, startColor, startInterval, endColor, endInterval, deprecatedWebkitStartPoint = false, deprecatedWebkitEndPoint = false)
+	background-color startColor
+	if deprecatedWebkitStartPoint && deprecatedWebkitEndPoint
+		background-image -webkit-gradient(linear, deprecatedWebkitStartPoint, deprecatedWebkitEndPoint, color-stop(startInterval, startColor), color-stop(endInterval, endColor))
+	background-image -webkit-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	background-image -moz-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	background-image -ms-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	background-image -o-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	background-image linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	
+@keyframes showLeft
+	from
+		left -100px
+		opacity 0
+	to
+		left 0px
+		opacity 1
+		
+body
+	wrap()
+	wrap("flexbox")
+	wrap("top")
+	background-color white
+	font-family "Titillium Web", sans-serif
+	height 100%
+	margin 0
+	padding 0
+	width 100%
+	
+html
+	height 100%
+	width 100%
+	
+.content
+	col()
+	col(2,3)
+	height 100%
+	overflow-y auto
+	padding 2rem
+	
+	.archive
+		padding 1rem
+		
+		article
+			color darken(walken, 50%)
+			padding 1rem 0
+			border-bottom 1px solid walken
+			
+			&:last-child
+				border-bottom 0
+			
+			h3
+				color darken(walken, 90%)
+				font-weight 600
+				line-height 1rem
+				margin 1rem 0
+
+			.date
+				display block
+				font-size 12px
+	
+	.site-nav
+		ul
+			list-style none
+			margin 0
+			padding 0
+			
+			li
+				display inline-block
+				
+				a
+					border-bottom 1px solid white
+					color darken(walken, 50%)
+					display block
+					padding 1.5rem 1rem
+					text-decoration none !important
+					
+					&:hover, &.active
+						border-bottom 1px solid world
+						color world
+
+.kevin
+	col()
+	col(1,3)
+	background-linear-gradient(bottom, walken, 0%, white, 40%)
+	border-right 1px solid walken
+	height 100%
+	overflow-y hidden
+	position relative
+	
+	.logo
+		background url("../ninja.png") center no-repeat
+		background-size contain
+		height 75px
+		left 50%
+		margin-left -105px
+		position absolute
+		top 20px
+		width 210px
+	
+	.photo
+		background url("../i2.png") center bottom no-repeat
+		background-size contain
+		bottom -120px
+		height 600px
+		left 10%
+		position absolute
+		width 80%
+		
+	.who
+		color darken(walken, 25%)
+		font-size 14px
+		padding 2rem
+		position absolute
+		text-align center
+		top 70px
+		
+		h2, h3
+			color darken(walken, 90%)
+			line-height 1rem
+			margin 0.75rem 0
+			
+		h2
+			font-size 26px
+			
+		h3
+			font-weight 600
+			
+		.hire
+			background transparent
+			border 2px solid millennial
+			border-radius(2rem)
+			color millennial
+			display block
+			margin 1rem auto
+			padding 0.75rem 2rem
