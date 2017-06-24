@@ -70,10 +70,11 @@ html
 	
 .content
 	col()
-	col(2,3)
+	col(5,7)
+	background rgb(228, 228, 228)
 	height 100%
 	overflow-y auto
-	padding 2rem
+	padding 1rem 2.5rem
 	
 	.archive
 		padding 1rem
@@ -163,6 +164,16 @@ html
 			.title
 				color darken(walken, 90%)
 				font-weight bold
+
+		.resume-area
+			background white
+			box-shadow(2px 2px 5px rgba(black,0.15))
+			margin 1.5rem 0
+			padding 1.5rem
+
+			&.abstract
+				font-size 1.15rem
+				text-align justify
 				
 		.skills
 			color darken(walken, 50%)
@@ -172,6 +183,21 @@ html
 			
 			li
 				padding 0.5rem
+
+			&.badge
+				text-align center
+				
+				li
+					background walken
+					border-radius(1rem)
+					display inline-block
+					margin 0.5rem
+					padding 0 1rem
+
+					span
+						border-right 3px solid white
+						margin 0 0.5rem 0 0
+						padding 0 0.5rem 0 0
 				
 			.bar
 				background walken
@@ -212,8 +238,8 @@ html
 
 .kevin
 	col()
-	col(1,3)
-	background-linear-gradient(bottom, darken(walken, 5%), 0%, darken(walken, 35%), 100%)
+	col(2,7)
+	background-linear-gradient(bottom, darken(world, 5%), 0%, darken(world, 35%), 100%)
 	height 100%
 	overflow-y hidden
 	position relative
@@ -262,7 +288,7 @@ html
 		width 96%
 		
 	.who
-		background-linear-gradient(top, transparent, 0%, rgba(black, 0.75), 100%)
+		background-linear-gradient(top, transparent, 0%, rgba(millennial, 0.75), 100%)
 		color darken(walken, 5%)
 		font-size 14px
 		padding 2rem 2rem 0.5rem
