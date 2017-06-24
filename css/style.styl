@@ -63,6 +63,9 @@ body
 	margin 0
 	padding 0
 	width 100%
+
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+		wrap("normal")
 	
 html
 	height 100%
@@ -75,6 +78,10 @@ html
 	height 100%
 	overflow-y auto
 	padding 1rem 2.5rem
+
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+		col(1,1)
+		font-size 1.5rem
 	
 	.archive
 		padding 1rem
@@ -120,8 +127,11 @@ html
 	.about
 		h3
 			color millennial
-			margin 0.5rem
+			margin 0.5rem 0
 			text-transform uppercase
+
+			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+				font-size 2rem
 			
 			span
 				display inline-block
@@ -136,6 +146,10 @@ html
 			.one_of_two
 				col()
 				col(1,2)
+
+				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+					col(1,1)
+					font-size 2rem
 				
 		.education
 			color darken(walken, 50%)
@@ -160,6 +174,11 @@ html
 				
 			.key
 				min-width 200px
+
+				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+					font-size 1.75em
+					max-width 240px
+					word-wrap break-word
 				
 			.title
 				color darken(walken, 90%)
@@ -172,122 +191,22 @@ html
 			padding 1.5rem
 
 			&.abstract
-				font-size 1.15rem
 				text-align justify
-				
-		.skills
-			color darken(walken, 50%)
-			list-style none
-			margin 0
-			padding 0
-			
-			li
-				padding 0.5rem
-
-			&.badge
-				text-align center
-				
-				li
-					background walken
-					border-radius(1rem)
-					display inline-block
-					margin 0.5rem
-					padding 0 1rem
-
-					span
-						border-right 3px solid white
-						margin 0 0.5rem 0 0
-						padding 0 0.5rem 0 0
-				
-			.bar
-				background walken
-				border-radius( 4px )
-				height 8px
-				margin 0.5rem 0
-				overflow hidden
-				
-				.progress
-					background lighten(millennial, 20%)
-					height 100%
-					width 50%
-					
-					&._10
-						width 10%
-						
-					&._25
-						width 25%
-						
-					&._65
-						width 65%
-						
-					&._75
-						background lighten(millennial, 25%)
-						width 75%
-						
-					&._85
-						background lighten(millennial, 30%)
-						width 90%
-						
-					&._95
-						background lighten(millennial, 35%)
-						width 95%
-						
-					&.complete
-						background lighten(millennial, 40%)
-						width 100%
 
 .kevin
 	col()
 	col(2,7)
 	background-linear-gradient(bottom, darken(world, 5%), 0%, darken(world, 35%), 100%)
+	box-shadow(0 0 20px 5px rgba(black, 50%))
 	height 100%
 	overflow-y hidden
 	position relative
+
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+		col(1,1)
+		box-shadow(none)
 	
-	.contact
-		left 0
-		position absolute
-		top 110px
-		width 100%
-		
-		ul
-			list-style none
-			margin 0
-			padding 0
-			text-align center
-			
-			li
-				display inline-block
-				font-size 1.5rem
-				padding 0.5rem 0.75rem
-				
-				a
-					color white
-					text-decoration none
-					
-					&:hover
-						text-shadow(0 0 5px rgba(black,0.5))
-	
-	.logo
-		background url("/img/ninja.png") center no-repeat
-		background-size contain
-		height 75px
-		left 50%
-		margin-left -105px
-		position absolute
-		top 20px
-		width 210px
-	
-	.photo
-		background url("/img/i.png") center bottom no-repeat
-		background-size contain
-		bottom -110px
-		height 100%
-		left 2%
-		position absolute
-		width 96%
-		
-	.who
+	.intro
 		background-linear-gradient(top, transparent, 0%, rgba(millennial, 0.75), 100%)
 		color darken(walken, 5%)
 		font-size 14px
@@ -296,14 +215,23 @@ html
 		text-align center
 		text-shadow( 2px 2px 5px rgba(black, 0.5))
 		bottom 0px
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			font-size 2.5em
 		
 		h2, h3
 			color white
 			line-height 1rem
 			margin 0.75rem 0
+
+			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+				line-height 1em
 			
 		h2
 			font-size 26px
+
+			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+				font-size 2em
 			
 		h3
 			font-weight 600
@@ -319,8 +247,129 @@ html
 			padding 0.75rem 2rem
 			text-decoration none
 			text-shadow( none )
+
+			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+				font-size 4rem
 			
 			&:hover
 				background white
 				color black
 				font-weight bold
+	
+	.logo
+		background url("/img/ninja.png") center no-repeat
+		background-size contain
+		height 75px
+		left 50%
+		margin-left -105px
+		position absolute
+		top 20px
+		width 210px
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			height 200px
+	
+	.photo
+		background url("/img/i.png") center bottom no-repeat
+		background-size contain
+		bottom -110px
+		filter opacity(70%)
+		height 100%
+		left 2%
+		position absolute
+		width 96%
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			bottom -250px
+
+	.social
+		left 0
+		position absolute
+		top 110px
+		width 100%
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			top 250px
+		
+		ul
+			list-style none
+			margin 0
+			padding 0
+			text-align center
+			
+			li
+				display inline-block
+				font-size 1.5rem
+				padding 0.5rem 0.75rem
+
+				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+					font-size 8rem
+				
+				a
+					color white
+					text-decoration none
+					
+					&:hover
+						text-shadow(0 0 5px rgba(black,0.5))
+
+.skills
+	color darken(walken, 50%)
+	list-style none
+	margin 0
+	padding 0
+	
+	li
+		padding 0.5rem
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			font-size 2.5rem
+
+	&.badge
+		text-align center
+		
+		li
+			background walken
+			border-radius(1rem)
+			display inline-block
+			margin 0.5rem
+			padding 0 1rem
+
+			span
+				border-right 3px solid white
+				margin 0 0.5rem 0 0
+				padding 0 0.5rem 0 0
+		
+	.bar
+		background walken
+		border-radius( 4px )
+		height 8px
+		margin 0.5rem 0
+		overflow hidden
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			border-radius(2rem)
+			height 1rem
+		
+		.progress
+			background lighten(millennial, 20%)
+			height 100%
+			width 50%
+			
+			&._25
+				width 25%
+				
+			&._75
+				background lighten(millennial, 25%)
+				width 75%
+				
+			&._85
+				background lighten(millennial, 30%)
+				width 90%
+				
+			&._95
+				background lighten(millennial, 35%)
+				width 95%
+				
+			&.complete
+				background lighten(millennial, 40%)
+				width 100%
