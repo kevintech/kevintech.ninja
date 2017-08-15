@@ -83,48 +83,7 @@ html
 		col(1,1)
 		font-size 1.5rem
 		height auto
-	
-	.archive
-		padding 1rem
-		
-		article
-			color darken(walken, 50%)
-			padding 1rem 0
-			border-bottom 1px solid walken
-			
-			&:last-child
-				border-bottom 0
-			
-			h3
-				color darken(walken, 90%)
-				font-weight 600
-				line-height 1rem
-				margin 1rem 0
 
-			.date
-				display block
-				font-size 12px
-	
-	.site-nav
-		ul
-			list-style none
-			margin 0
-			padding 0
-			
-			li
-				display inline-block
-				
-				a
-					border-bottom 1px solid white
-					color darken(walken, 50%)
-					display block
-					padding 1.5rem 1rem
-					text-decoration none !important
-					
-					&:hover, &.active
-						border-bottom 1px solid world
-						color world
-						
 	.about
 		h3
 			color millennial
@@ -151,7 +110,7 @@ html
 				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 					col(1,1)
 					font-size 2rem
-				
+
 		.education
 			color darken(walken, 50%)
 			list-style none
@@ -260,6 +219,27 @@ html
 			
 		h3
 			font-weight 600
+
+		.download-cv
+			color white
+			cursor pointer
+			display block
+			margin 0 auto
+			text-decoration none
+			text-shadow( 2px 2px 5px rgba(black, 0.5))
+
+			&:hover
+				text-decoration underline
+
+			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+				font-size 2.25rem
+				margin-top 1rem
+
+			.sup
+				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+					display block
+					font-size 1.75rem
+					line-height 1em
 			
 		.hire
 			background transparent
