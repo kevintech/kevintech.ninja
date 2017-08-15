@@ -1,5 +1,24 @@
 {
-  "dependencies": {
+  "dependencies": {},
+  "name": "kevintech.ninja",
+  "description": "My personal website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
     "flexiblegs-stylus": "^5.5.3"
-  }
+  },
+  "scripts": {
+    "build": "stylus -c css/style.styl",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kevintech@github.com/kevintech/kevintech.ninja.git"
+  },
+  "author": "Kevin Herrarte",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kevintech/kevintech.ninja/issues"
+  },
+  "homepage": "https://github.com/kevintech/kevintech.ninja#readme"
 }
