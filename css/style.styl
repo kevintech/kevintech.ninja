@@ -3,6 +3,8 @@
 millennial = #025D8C
 walken = #DADBDE
 world = #02517A
+hFontSize = 20px
+pFontSize = 16px
 
 vendor(prop, args)
 	-webkit-{prop} args
@@ -77,25 +79,26 @@ html
 	background rgb(228, 228, 228)
 	height 100%
 	overflow-y auto
-	padding 1rem 2.5rem
+	padding pFontSize 2.5*pFontSize
 
 	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 		col(1,1)
-		font-size 1.5rem
+		font-size 1.5*pFontSize
 		height auto
 
 	.about
 		h3
 			color millennial
-			margin 0.5rem 0
+			font-size hFontSize
+			margin 0.5*hFontSize 0
 			text-transform uppercase
 
 			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-				font-size 2rem
+				font-size 1.5*hFontSize
 			
 			span
 				display inline-block
-				margin-right 1rem
+				margin-right 0.75*hFontSize
 				vertical-align middle
 			
 		.cols
@@ -109,7 +112,7 @@ html
 
 				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 					col(1,1)
-					font-size 2rem
+					font-size 2*pFontSize
 
 		.education
 			color darken(walken, 50%)
@@ -118,28 +121,37 @@ html
 			padding 0
 			
 			li
-				padding 0.5 rem
+				padding 0.5*pFontSize
 
 			.detail-links
 				a
-					color black
+					color darken(walken, 50%)
+					cursor pointer
 					display inline-block
 					text-decoration none !important
 
 					@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 						display block
-						font-size 50px
-
-					&:hover
-						color millennial
+						font-size 2.75*pFontSize
 
 					&:after
 						content "|"
-						padding 0 0.25rem
+						padding 0 0.25*pFontSize
 
 						@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 							content ""
 							padding 0
+
+					&:before
+						font-family "entypo"
+
+						@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+							content "\ea1c"
+							font-size 2*pFontSize
+							padding-right 0.5*pFontSize
+
+					&:hover
+						color millennial
 
 					&:last-child:after
 						content ""
@@ -153,14 +165,14 @@ html
 			color darken(walken, 50%)
 			
 			td
-				padding 0.5rem 1rem
+				padding 0.5*pFontSize pFontSize
 				vertical-align top
 				
 			.key
 				min-width 200px
 
 				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-					font-size 1.75em
+					font-size 2.5*pFontSize
 					max-width 240px
 					word-wrap break-word
 				
@@ -171,8 +183,8 @@ html
 		.resume-area
 			background white
 			box-shadow(2px 2px 5px rgba(black,0.15))
-			margin 1.5rem 0
-			padding 1.5rem
+			margin 1.5*pFontSize 0
+			padding 1.5*pFontSize
 
 			&.abstract
 				text-align justify
@@ -193,29 +205,29 @@ html
 	.intro
 		background-linear-gradient(top, transparent, 0%, rgba(millennial, 0.75), 100%)
 		color darken(walken, 5%)
-		font-size 14px
-		padding 2rem 2rem 0.5rem
+		font-size 0.9*pFontSize
+		padding 2em 2em 0.5em
 		position absolute
 		text-align center
 		text-shadow( 2px 2px 5px rgba(black, 0.5))
 		bottom 0px
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			font-size 2.5em
+			font-size 2.5*pFontSize
 		
 		h2, h3
 			color white
-			line-height 1rem
-			margin 0.75rem 0
+			line-height 0.75*hFontSize
+			margin 0.5*hFontSize 0
 
 			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 				line-height 1em
 			
 		h2
-			font-size 26px
+			font-size 1.35*hFontSize
 
 			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-				font-size 2em
+				font-size 4*hFontSize
 			
 		h3
 			font-weight 600
@@ -232,33 +244,33 @@ html
 				text-decoration underline
 
 			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-				font-size 2.25rem
-				margin-top 1rem
+				font-size 2.25*pFontSize
+				margin-top 0.5em
 
 			.sup
 				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 					display block
-					font-size 1.75rem
+					font-size 1.75*pFontSize
 					line-height 1em
 			
 		.hire
 			background transparent
 			border 2px solid white
-			border-radius(2rem)
+			border-radius(2em)
 			color white
 			cursor pointer
 			display inline-block
-			margin 1rem auto
-			padding 0.75rem 2rem
+			margin 1em auto
+			padding 0.75em 2em
 			text-decoration none
 			text-shadow( none )
 
 			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 				background white
-				border-radius(4rem)
+				border-radius(1em)
 				color millennial
-				font-size 4rem
-				padding 1rem 4rem
+				font-size 4*pFontSize
+				padding 0.25em 1em
 			
 			&:hover
 				background white
@@ -308,11 +320,12 @@ html
 			
 			li
 				display inline-block
-				font-size 1.5rem
-				padding 0.5rem 0.75rem
+				font-size 1.5*pFontSize
+				padding 0.25em 0.5em
 
 				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-					font-size 8rem
+					font-size 8*pFontSize
+					padding 0.25em
 				
 				a
 					color white
@@ -328,36 +341,41 @@ html
 	padding 0
 	
 	li
-		padding 0.5rem
+		padding 0.5*pFontSize
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			font-size 2.5rem
+			font-size 2.5*pFontSize
+			padding 0.25em
 
 	&.badge
 		text-align center
 		
 		li
 			background walken
-			border-radius(1rem)
+			border-radius(1em)
 			display inline-block
-			margin 0.5rem
-			padding 0 1rem
+			margin 0.5*pFontSize
+			padding 0 1*pFontSize
+
+			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+				margin 0.5em 0.25em
+				padding 0 0.5em
 
 			span
 				border-right 3px solid white
-				margin 0 0.5rem 0 0
-				padding 0 0.5rem 0 0
+				margin 0 0.5*pFontSize 0 0
+				padding 0 0.5*pFontSize 0 0
 		
 	.bar
 		background walken
 		border-radius( 4px )
 		height 8px
-		margin 0.5rem 0
+		margin 0.5*pFontSize 0
 		overflow hidden
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			border-radius(2rem)
-			height 1rem
+			border-radius(10px)
+			height 20px
 		
 		.progress
 			background lighten(millennial, 20%)
