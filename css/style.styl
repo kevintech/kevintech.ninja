@@ -83,22 +83,19 @@ html
 
 	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 		col(1,1)
-		font-size 1.5*pFontSize
 		height auto
+		padding 0 pFontSize
 
 	.about
 		h3
 			color millennial
 			font-size hFontSize
-			margin 0.5*hFontSize 0
+			margin 0.5em 0
 			text-transform uppercase
-
-			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-				font-size 1.5*hFontSize
 			
 			span
 				display inline-block
-				margin-right 0.75*hFontSize
+				margin-right 0.5em
 				vertical-align middle
 			
 		.cols
@@ -112,7 +109,6 @@ html
 
 				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 					col(1,1)
-					font-size 2*pFontSize
 
 		.education
 			color darken(walken, 50%)
@@ -121,7 +117,10 @@ html
 			padding 0
 			
 			li
-				padding 0.5*pFontSize
+				padding 0.5em
+
+				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+					padding 0
 
 			.detail-links
 				a
@@ -132,11 +131,10 @@ html
 
 					@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 						display block
-						font-size 2.75*pFontSize
 
 					&:after
 						content "|"
-						padding 0 0.25*pFontSize
+						padding 0 0.25em
 
 						@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 							content ""
@@ -147,8 +145,8 @@ html
 
 						@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 							content "\ea1c"
-							font-size 2*pFontSize
-							padding-right 0.5*pFontSize
+							font-size 0.75em
+							padding-right 0.5em
 
 					&:hover
 						color millennial
@@ -165,15 +163,15 @@ html
 			color darken(walken, 50%)
 			
 			td
-				padding 0.5*pFontSize pFontSize
+				padding 0.5em 1em
 				vertical-align top
 				
 			.key
 				min-width 200px
 
 				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-					font-size 2.5*pFontSize
-					max-width 240px
+					max-width 100px
+					padding 0.5em 0
 					word-wrap break-word
 				
 			.title
@@ -183,8 +181,11 @@ html
 		.resume-area
 			background white
 			box-shadow(2px 2px 5px rgba(black,0.15))
-			margin 1.5*pFontSize 0
-			padding 1.5*pFontSize
+			margin 1.5em 0
+			padding 1.5em
+
+			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+				padding 1em
 
 			&.abstract
 				text-align justify
@@ -211,9 +212,6 @@ html
 		text-align center
 		text-shadow( 2px 2px 5px rgba(black, 0.5))
 		bottom 0px
-
-		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			font-size 2.5*pFontSize
 		
 		h2, h3
 			color white
@@ -221,13 +219,13 @@ html
 			margin 0.5*hFontSize 0
 
 			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-				line-height 1em
+				line-height 0.75em
 			
 		h2
 			font-size 1.35*hFontSize
 
 			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-				font-size 4*hFontSize
+				font-size 1.5*hFontSize
 			
 		h3
 			font-weight 600
@@ -243,14 +241,10 @@ html
 			&:hover
 				text-decoration underline
 
-			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-				font-size 2.25*pFontSize
-				margin-top 0.5em
-
 			.sup
 				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 					display block
-					font-size 1.75*pFontSize
+					font-size 0.75em
 					line-height 1em
 			
 		.hire
@@ -267,9 +261,9 @@ html
 
 			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 				background white
-				border-radius(1em)
+				border-radius(1.5em)
 				color millennial
-				font-size 4*pFontSize
+				font-size 1.25*pFontSize
 				padding 0.25em 1em
 			
 			&:hover
@@ -278,7 +272,7 @@ html
 				font-weight bold
 	
 	.logo
-		background url("/img/ninja.png") center no-repeat
+		background url("../img/ninja.png") center no-repeat
 		background-size contain
 		height 75px
 		left 50%
@@ -288,10 +282,10 @@ html
 		width 210px
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			height 200px
+			height 65px
 	
 	.photo
-		background url("/img/i.png") center bottom no-repeat
+		background url("../img/i.png") center bottom no-repeat
 		background-size contain
 		bottom -110px
 		filter opacity(70%)
@@ -301,7 +295,7 @@ html
 		width 96%
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			bottom -250px
+			bottom -100px
 
 	.social
 		left 0
@@ -310,7 +304,7 @@ html
 		width 100%
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			top 225px
+			top 100px
 		
 		ul
 			list-style none
@@ -324,7 +318,7 @@ html
 				padding 0.25em 0.5em
 
 				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-					font-size 8*pFontSize
+					font-size 2.75*pFontSize
 					padding 0.25em
 				
 				a
@@ -341,10 +335,9 @@ html
 	padding 0
 	
 	li
-		padding 0.5*pFontSize
+		padding 0.5em
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			font-size 2.5*pFontSize
 			padding 0.25em
 
 	&.badge
@@ -354,17 +347,16 @@ html
 			background walken
 			border-radius(1em)
 			display inline-block
-			margin 0.5*pFontSize
-			padding 0 1*pFontSize
+			margin 0.5em
+			padding 0 1em
 
 			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-				margin 0.5em 0.25em
-				padding 0 0.5em
+				margin 0.3em 0.25em
 
 			span
 				border-right 3px solid white
-				margin 0 0.5*pFontSize 0 0
-				padding 0 0.5*pFontSize 0 0
+				margin 0 0.5em 0 0
+				padding 0 0.5em 0 0
 		
 	.bar
 		background walken
@@ -372,10 +364,6 @@ html
 		height 8px
 		margin 0.5*pFontSize 0
 		overflow hidden
-
-		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			border-radius(10px)
-			height 20px
 		
 		.progress
 			background lighten(millennial, 20%)
