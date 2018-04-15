@@ -1,10 +1,10 @@
 @import "../node_modules/flexiblegs-stylus/flexiblegs-stylus"
 
-millennial = #025D8C
-walken = #DADBDE
-world = #02517A
-hFontSize = 20px
-pFontSize = 16px
+millennial = #0399e7
+notWhite = #FAFAFA
+notBlack = #333333
+headingFontSize = 20px
+paragraphFontSize = 16px
 
 vendor(prop, args)
 	-webkit-{prop} args
@@ -46,345 +46,365 @@ background-linear-gradient(startPoint, startColor, startInterval, endColor, endI
 	background-image -ms-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
 	background-image -o-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
 	background-image linear-gradient(startPoint, startColor startInterval, endColor endInterval)
-	
-@keyframes showLeft
-	from
-		left -100px
-		opacity 0
-	to
-		left 0px
-		opacity 1
 		
 body
 	wrap()
-	wrap("flexbox")
+	wrap("normal")
 	wrap("top")
 	background-color white
-	font-family "Titillium Web", sans-serif
+	font-family "Open Sans", sans-serif
 	height 100%
 	margin 0
 	padding 0
 	width 100%
-
-	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-		wrap("normal")
 	
 html
 	height 100%
 	width 100%
-	
-.content
+
+.content-full-area
 	col()
-	col(5,7)
-	background rgb(228, 228, 228)
+	col(1,1)
+	background notWhite
 	height 100%
-	overflow-y auto
-	padding pFontSize 2.5*pFontSize
 
 	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-		col(1,1)
 		height auto
-		padding 0 pFontSize
+		min-height 100%
 
-	.about
-		h3
-			color millennial
-			font-size hFontSize
-			margin 0.5em 0
-			text-transform uppercase
-			
-			span
-				display inline-block
-				margin-right 0.5em
-				vertical-align middle
-			
-		.cols
-			wrap()
-			wrap("flexbox")
-			wrap("top")
-			
-			.one_of_two
-				col()
-				col(1,2)
+	h2
+		color millennial
+		font-size 1.5*headingFontSize
+		font-weight 600
+		padding 0.5*paragraphFontSize paragraphFontSize
+		position relative
+		text-align center
+		text-transform uppercase
 
-				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-					col(1,1)
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			font-size 1.25*headingFontSize
 
-		.education
-			color darken(walken, 50%)
-			list-style none
-			margin 0
-			padding 0
-			
-			li
-				padding 0.5em
-
-				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-					padding 0
-
-			.detail-links
-				a
-					color darken(walken, 50%)
-					cursor pointer
-					display inline-block
-					text-decoration none !important
-
-					@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-						display block
-
-					&:after
-						content "|"
-						padding 0 0.25em
-
-						@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-							content ""
-							padding 0
-
-					&:before
-						font-family "entypo"
-
-						@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-							content "\ea1c"
-							font-size 0.75em
-							padding-right 0.5em
-
-					&:hover
-						color millennial
-
-					&:last-child:after
-						content ""
-				
-			.title
-				color darken(walken, 90%)
-				font-weight bold
-			
-		.experience
-			border-collapse collapse
-			color darken(walken, 50%)
-			
-			td
-				padding 0.5em 1em
-				vertical-align top
-				
-			.key
-				min-width 200px
-
-				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-					max-width 100px
-					padding 0.5em 0
-					word-wrap break-word
-				
-			.title
-				color darken(walken, 90%)
-				font-weight bold
-
-		.resume-area
-			background white
-			box-shadow(2px 2px 5px rgba(black,0.15))
-			margin 1.5em 0
-			padding 1.5em
+		&:after
+			background millennial
+			border-radius(4px)
+			content "-"
+			display block
+			font-size 0
+			margin 10px auto 0
+			height 4px
+			width 100px
 
 			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-				padding 1em
+				height 2px
 
-			&.abstract
-				text-align justify
-
-.kevin
-	col()
-	col(2,7)
-	background-linear-gradient(bottom, darken(world, 5%), 0%, darken(world, 35%), 100%)
-	box-shadow(0 0 20px 5px rgba(black, 50%))
-	height 100%
-	overflow-y hidden
-	position relative
+.cover
+	padding 4*headingFontSize 8*headingFontSize
 
 	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-		col(1,1)
-		box-shadow(none)
-	
-	.intro
-		background-linear-gradient(top, transparent, 0%, rgba(millennial, 0.75), 100%)
-		color darken(walken, 5%)
-		font-size 0.9*pFontSize
-		padding 2em 2em 0.5em
-		position absolute
-		text-align center
-		text-shadow( 2px 2px 5px rgba(black, 0.5))
-		bottom 0px
-		
-		h2, h3
-			color white
-			line-height 0.75*hFontSize
-			margin 0.5*hFontSize 0
+		padding 4*headingFontSize 2*headingFontSize
 
-			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-				line-height 0.75em
-			
-		h2
-			font-size 1.35*hFontSize
-
-			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-				font-size 1.5*hFontSize
-			
-		h3
-			font-weight 600
-
-		.download-cv
-			color white
-			cursor pointer
-			display block
-			margin 0 auto
-			text-decoration none
-			text-shadow( 2px 2px 5px rgba(black, 0.5))
-
-			&:hover
-				text-decoration underline
-
-			.sup
-				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-					display block
-					font-size 0.75em
-					line-height 1em
-			
-		.hire
-			background transparent
-			border 2px solid white
-			border-radius(2em)
-			color white
-			cursor pointer
-			display inline-block
-			margin 1em auto
-			padding 0.75em 2em
-			text-decoration none
-			text-shadow( none )
-
-			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-				background white
-				border-radius(1.5em)
-				color millennial
-				font-size 1.25*pFontSize
-				padding 0.25em 1em
-			
-			&:hover
-				background white
-				color black
-				font-weight bold
-	
-	.logo
-		background url("/img/ninja.png") center no-repeat
-		background-size contain
-		height 75px
-		left 50%
-		margin-left -105px
-		position absolute
-		top 20px
-		width 210px
+	&__box-content
+		background white
+		border-bottom 5px solid millennial
+		box-shadow(5px 5px 20px rgba(black,15%))
+		padding 2*headingFontSize 3*headingFontSize
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			height 65px
-	
-	.photo
-		background url("/img/i.png") center bottom no-repeat
-		background-size contain
-		bottom -110px
-		filter opacity(70%)
-		height 100%
-		left 2%
-		position absolute
-		width 96%
+			background none
+			border-bottom none
+			box-shadow(none)
+			padding headingFontSize 0
 
-		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			bottom -100px
+		p
+			line-height 1.65em
 
-	.social
-		left 0
-		position absolute
-		top 110px
-		width 100%
+.education
+	height auto
+	min-height 100%
+	padding 2*headingFontSize 8*headingFontSize
 
-		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			top 100px
-		
-		ul
-			list-style none
-			margin 0
-			padding 0
-			text-align center
-			
-			li
-				display inline-block
-				font-size 1.5*pFontSize
-				padding 0.25em 0.5em
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+		padding headingFontSize 2*headingFontSize
 
-				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-					font-size 2.75*pFontSize
-					padding 0.25em
-				
-				a
-					color white
-					text-decoration none
-					
-					&:hover
-						text-shadow(0 0 5px rgba(black,0.5))
-
-.skills
-	color darken(walken, 50%)
-	list-style none
-	margin 0
-	padding 0
+	&__timeline
+		list-style none
+		margin 0
+		padding 0
 	
 	li
 		padding 0.5em
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			padding 0.25em
+			padding 0
 
-	&.badge
-		text-align center
-		
-		li
-			background walken
-			border-radius(1em)
-			display inline-block
-			margin 0.5em
-			padding 0 1em
+		.date
+			color lighten(notBlack, 50%)
+			font-style italic
+			margin-left 1em
 
 			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-				margin 0.3em 0.25em
+				color notBlack
+				display block
+				font-size 0.9*paragraphFontSize
+				font-style normal
+				margin-left 0
+
+		.title
+			font-weight bold
+
+	.detail-links
+		text-align center 
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			text-align left
+		
+		a
+			background white
+			box-shadow(5px 5px 20px rgba(black, 5%))
+			color notBlack
+			cursor pointer
+			display inline-block
+			line-height 2em
+			margin 0.25em
+			padding 0 1em
+			text-decoration none !important
+			transition 0.2s ease-in-out
+
+			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+				background none
+				box-shadow(none)
+				display block
+				line-height 1.5em
+
+				&:before
+					content "→ "
+
+			&:hover
+				background millennial
+				color notWhite
+
+			&:last-child:after
+				content ""
+
+.intro
+	col()
+	col(1,1)
+	background-color notWhite
+	height 100%
+	padding 2*headingFontSize 5*headingFontSize
+
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+		//background-linear-gradient(top, transparent, 0%, rgba(notBlack, 0.25), 190%)
+		padding headingFontSize
+		
+	h1, h2
+		color black
+		font-weight 400
+		line-height 1.5em
+		margin 2*headingFontSize 0
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			margin 1.5*headingFontSize 0
+		
+	h1
+		font-size 1.75*headingFontSize
+		padding-right 40%
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			font-size headingFontSize
+			padding-right 0
+
+		strong
+			font-weight 800
+		
+	h2
+		font-size 1.75*headingFontSize
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			font-size headingFontSize
+		
+	&__contact-btn
+		background millennial
+		border-radius(2em)
+		box-shadow(8px 8px 40px rgba(millennial,0.5))
+		color white
+		cursor pointer
+		display inline-block
+		font-size 1.25*paragraphFontSize
+		margin 1em auto
+		padding 0.75em 2em
+		transition 0.2s ease-in-out
+		text-decoration none
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			border-radius(1.5em)
+			font-size 1.25*paragraphFontSize
+			margin 0 auto 1em
+			padding 0.25em 1em
+			width 250px
+		
+		&:hover
+			background lighten(millennial, 30%)
+			color white
+
+	&__download-cv-btn
+		color black
+		cursor pointer
+		display block
+		font-size 1.1*paragraphFontSize
+		margin 1em auto
+		padding-right 40% 
+		text-decoration none
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			font-size headingFontSize
+
+		i
+			transition 0.2s ease-in-out
+			vertical-align middle
+
+		.sup
+			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+				display block
+				font-size 0.75em
+				line-height 1em
+
+		&:hover
+			i
+				margin-left 0.5*paragraphFontSize
+	
+	&__photo
+		background url("/img/me-red.png") right bottom no-repeat
+		background-size contain
+		border-radius(100%)
+		bottom 5%
+		box-shadow(0px 10px 10px rgba(black,0.15))
+		filter opacity(85%)
+		height 300px
+		right 5%
+		position absolute
+		width 300px
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			border-radius(0)
+			bottom 0
+			box-shadow(none)
+			filter none
+			right 0
+			width 280px
+
+	&__social
+		right headingFontSize
+		position absolute
+		top headingFontSize
+		width 100%
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			top 0
+			right 0
+		
+		ul
+			list-style none
+			margin 0
+			padding 0
+			text-align right
+			
+			li
+				display inline-block
+				font-size 1.5*headingFontSize
+				padding 0.25em 0.5em
+
+				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+					font-size 2*paragraphFontSize
+					padding 0.25em
+				
+				a
+					color notBlack
+					transition 0.2s ease-in-out
+					text-decoration none
+					
+					&:hover
+						color millennial
+
+.skills
+	padding 4*headingFontSize
+	text-align center
+
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+		padding headingFontSize 2*headingFontSize
+
+	&__list
+		color notBlack
+		list-style none
+		margin 0
+		padding 0
+		
+		li
+			background white
+			box-shadow(5px 5px 20px rgba(black, 5%))
+			display inline-block
+			margin 1em 0.5em
+			padding 0.5em 1em
+
+			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+				font-size 0.75*headingFontSize
+				margin 0.25em
+				padding 0.35em
 
 			span
 				border-right 3px solid white
 				margin 0 0.5em 0 0
 				padding 0 0.5em 0 0
-		
-	.bar
-		background walken
-		border-radius( 4px )
-		height 8px
-		margin 0.5*pFontSize 0
-		overflow hidden
-		
-		.progress
-			background lighten(millennial, 20%)
-			height 100%
-			width 50%
+
+	&__list-languages
+		margin 2*headingFontSize 0 0 0
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			display none
+
+		li
+			margin 0 paragraphFontSize
+			padding paragraphFontSize
+
+.work-experience
+	height auto
+	min-height 100%
+	padding 4*headingFontSize
+
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+		padding headingFontSize 2*headingFontSize
+
+	&__timeline
+		color notBlack
+		list-style none
+		margin headingFontSize 0
+		padding 0 4*headingFontSize
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			padding 0
+
+		li
+			display block
+			margin 2em 0
+			position relative
+
+			.date
+				color lighten(notBlack, 50%)
+				font-style italic
+				position absolute
+				right 0
+				top 0
+
+				@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+					display block
+					font-size 0.9*paragraphFontSize
+					font-style normal
+					position relative
+
+			.position
+				font-weight 600
 			
-			&._25
-				width 25%
-				
-			&._75
-				background lighten(millennial, 25%)
-				width 75%
-				
-			&._85
-				background lighten(millennial, 30%)
-				width 90%
-				
-			&._95
-				background lighten(millennial, 35%)
-				width 95%
-				
-			&.complete
-				background lighten(millennial, 40%)
-				width 100%
+			.company
+				display block
+				font-weight 700
+				line-height 1.75em
