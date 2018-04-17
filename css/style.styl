@@ -72,6 +72,10 @@ html
 		height auto
 		min-height 100%
 
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+		height auto
+		min-height 100%
+
 	h2
 		color millennial
 		font-size 1.5*headingFontSize
@@ -83,6 +87,9 @@ html
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 			font-size 1.25*headingFontSize
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+			font-size 1.25*paragraphFontSize
 
 		&:after
 			background millennial
@@ -101,7 +108,10 @@ html
 	padding 4*headingFontSize 8*headingFontSize
 
 	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-		padding 4*headingFontSize 2*headingFontSize
+		padding 2*headingFontSize 2*headingFontSize
+
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+		padding 2*paragraphFontSize 2*paragraphFontSize
 
 	&__box-content
 		background white
@@ -113,7 +123,13 @@ html
 			background none
 			border-bottom none
 			box-shadow(none)
-			padding headingFontSize 0
+			padding 0
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+			background none
+			border-bottom none
+			box-shadow(none)
+			padding paragraphFontSize
 
 		p
 			line-height 1.65em
@@ -126,16 +142,21 @@ html
 	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 		padding headingFontSize 2*headingFontSize
 
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+		padding headingFontSize 2.5*headingFontSize
+
 	&__timeline
 		list-style none
 		margin 0
 		padding 0
 	
 	li
-		padding 0.5em
+		border-bottom 1px dotted darken(notWhite, 20%)
+		margin 0.5em 0
+		padding 0.5em 0
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
-			padding 0
+			border-bottom-color darken(notWhite, 50%)
 
 		.date
 			color lighten(notBlack, 50%)
@@ -196,6 +217,9 @@ html
 	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 		//background-linear-gradient(top, transparent, 0%, rgba(notBlack, 0.25), 190%)
 		padding headingFontSize
+
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+		padding headingFontSize 1.5*headingFontSize
 		
 	h1, h2
 		color black
@@ -205,6 +229,9 @@ html
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 			margin 1.5*headingFontSize 0
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+			margin headingFontSize 0
 		
 	h1
 		font-size 1.75*headingFontSize
@@ -214,6 +241,9 @@ html
 			font-size headingFontSize
 			padding-right 0
 
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+			font-size 0.9*headingFontSize
+
 		strong
 			font-weight 800
 		
@@ -221,6 +251,9 @@ html
 		font-size 1.75*headingFontSize
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			font-size headingFontSize
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
 			font-size headingFontSize
 		
 	&__contact-btn
@@ -242,6 +275,9 @@ html
 			margin 0 auto 1em
 			padding 0.25em 1em
 			width 250px
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+			font-size paragraphFontSize
 		
 		&:hover
 			background lighten(millennial, 30%)
@@ -258,6 +294,9 @@ html
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 			font-size headingFontSize
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+			font-size paragraphFontSize
 
 		i
 			transition 0.2s ease-in-out
@@ -290,8 +329,14 @@ html
 			bottom 0
 			box-shadow(none)
 			filter none
+			height 280px
 			right 0
 			width 280px
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+			height 250px
+			right 20px
+			width 250px
 
 	&__social
 		right headingFontSize
@@ -300,6 +345,10 @@ html
 		width 100%
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			top 0
+			right 0
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
 			top 0
 			right 0
 		
@@ -333,6 +382,9 @@ html
 	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 		padding headingFontSize 2*headingFontSize
 
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+		padding headingFontSize 2*headingFontSize
+
 	&__list
 		color notBlack
 		list-style none
@@ -351,6 +403,11 @@ html
 				margin 0.25em
 				padding 0.35em
 
+			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+				font-size paragraphFontSize
+				margin 0.25em
+				padding 0.35em
+
 			span
 				border-right 3px solid white
 				margin 0 0.5em 0 0
@@ -360,6 +417,9 @@ html
 		margin 2*headingFontSize 0 0 0
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+			display none
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
 			display none
 
 		li
@@ -374,6 +434,9 @@ html
 	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 		padding headingFontSize 2*headingFontSize
 
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+		padding headingFontSize 2.5*headingFontSize
+
 	&__timeline
 		color notBlack
 		list-style none
@@ -383,10 +446,20 @@ html
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
 			padding 0
 
+		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+			padding 0
+
 		li
+			border-bottom 1px dotted darken(notWhite, 20%)
 			display block
 			margin 2em 0
 			position relative
+
+			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait)
+				border-bottom-color darken(notWhite, 50%)
+
+			@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
+				margin 1em 0
 
 			.date
 				color lighten(notBlack, 50%)
