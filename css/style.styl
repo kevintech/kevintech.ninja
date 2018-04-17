@@ -244,6 +244,9 @@ html
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
 			font-size 0.9*headingFontSize
 
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+			padding-right 0
+
 		strong
 			font-weight 800
 		
@@ -278,6 +281,9 @@ html
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
 			font-size paragraphFontSize
+
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+			font-size 1.35*paragraphFontSize
 		
 		&:hover
 			background lighten(millennial, 30%)
@@ -297,6 +303,9 @@ html
 
 		@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape)
 			font-size paragraphFontSize
+
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+			font-size 1.5*paragraphFontSize
 
 		i
 			transition 0.2s ease-in-out
@@ -337,6 +346,10 @@ html
 			height 250px
 			right 20px
 			width 250px
+
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+			height 350px
+			width 350px
 
 	&__social
 		right headingFontSize
