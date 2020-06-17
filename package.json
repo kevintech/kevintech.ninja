@@ -1,22 +1,48 @@
 {
-  "dependencies": {},
   "name": "kevintech.ninja",
+  "private": true,
   "description": "My personal website",
-  "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {
-    "flexiblegs-stylus": "^5.5.3"
+  "version": "0.2.0",
+  "author": "Kevin Herrarte <kevinfertech@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.19.7",
+    "gatsby-image": "^2.2.39",
+    "gatsby-plugin-google-analytics": "^2.1.36",
+    "gatsby-plugin-manifest": "^2.2.39",
+    "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-sharp": "^2.4.3",
+    "gatsby-plugin-typography": "^2.3.22",
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-transformer-sharp": "^2.3.13",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19",
+    "typography-theme-ocean-beach": "^0.16.19"
   },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "keywords": [
+    "kevintech"
+  ],
+  "license": "Apache-2.0",
   "scripts": {
-    "build": "stylus -c css/style.styl",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://kevintech@github.com/kevintech/kevintech.ninja.git"
   },
-  "author": "Kevin Herrarte",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/kevintech/kevintech.ninja/issues"
   },
