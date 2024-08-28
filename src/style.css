@@ -33,11 +33,11 @@
     "Noto Color Emoji";
   --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
     Times, serif;
-  --font-body: var(--fontFamily-serif);
+  --font-body: var(--fontFamily-sans);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
-  --fontWeight-bold: 700;
-  --fontWeight-black: 900;
+  --fontWeight-bold: 500;
+  --fontWeight-black: 600;
   --fontSize-root: 16px;
   --lineHeight-none: 1;
   --lineHeight-tight: 1.1;
@@ -52,12 +52,17 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
+  --color-button: hsla(0,0%,0%,0.9);
+  --color-button-accent: #ffffff;
   --color-primary: #005b99;
-  --color-text: #2e353f;
+  --color-text: hsla(0,0%,0%,0.8);
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
+  --color-heading: hsla(0,0%,0%,0.8);
+  --color-heading-black: hsla(0,0%,0%,0.9);
   --color-accent: #d1dce5;
+  --border-width: 1px;
+  --border-color: hsla(0,0%,0%,0.07);
+  --border-style: solid;
 }
 
 /* HTML elements */
@@ -79,6 +84,12 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  font-kerning: normal;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  word-wrap: break-word;
 }
 
 footer {
@@ -104,6 +115,7 @@ h6 {
   margin-bottom: var(--spacing-6);
   line-height: var(--lineHeight-tight);
   letter-spacing: -0.025em;
+  text-rendering: optimizeLegibility;
 }
 
 h2,
@@ -116,13 +128,19 @@ h6 {
 }
 
 h1 {
-  font-weight: var(--fontWeight-black);
-  font-size: var(--fontSize-6);
+  border-bottom-style: var(--border-style);
+  border-bottom-width: var(--border-width);
+  border-bottom-color: var(--border-color);
   color: var(--color-heading-black);
+  font-weight: var(--fontWeight-black);
+  font-size: var(--fontSize-7);
+  padding-bottom: var(--spacing-2);
 }
 
 h2 {
-  font-size: var(--fontSize-5);
+  font-size: var(--fontSize-4);
+  font-weight: var(--fontWeight-black);
+  padding-bottom: var(--spacing-2);
 }
 
 h3 {
@@ -229,6 +247,7 @@ table thead tr th {
 
 a {
   color: var(--color-primary);
+  text-decoration: none;
 }
 
 a:hover,
@@ -250,6 +269,10 @@ a:focus {
 
 .global-header {
   margin-bottom: var(--spacing-12);
+}
+
+.global-footer {
+  text-align: center;
 }
 
 .main-heading {
@@ -278,10 +301,26 @@ a:focus {
 }
 
 .header-link-home {
-  font-weight: var(--fontWeight-bold);
+  font-weight: var(--fontWeight-black);
   font-family: var(--font-heading);
   text-decoration: none;
   font-size: var(--fontSize-2);
+}
+
+.footer-link-home {
+  background-color: var(--color-button);
+  border-radius: var(--spacing-2);
+  color: var(--color-button-accent);
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: var(--fontSize-1);
+  font-weight: var(--fontWeight-black);
+  margin-top: var(--spacing-6);
+  letter-spacing: 2px;
+  padding-block: var(--spacing-3);
+  padding-inline: var(--spacing-5);
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .bio {
