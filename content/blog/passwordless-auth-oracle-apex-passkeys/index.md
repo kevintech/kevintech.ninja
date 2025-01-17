@@ -1,6 +1,7 @@
 ---
 title: Unlock Passwordless Authentication in Oracle APEX with Passkeys
 date: "2025-01-14T20:26:37.121Z"
+keywords: ["oracle apex", "webauthn", "passkeys", "passwordless authentication", "security", "biometrics"]
 ---
 
 Did you know that 81% of data breaches are caused by weak or stolen passwords? As developers, we've all faced the challenge of securing user authentication while maintaining a smooth user experience. Enter passkeys—the next generation of passwordless authentication built on the WebAuthn standard. This post explains how we implemented passkeys in Oracle APEX and introduces a custom plugin that makes integration seamless for developers.

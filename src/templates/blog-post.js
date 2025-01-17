@@ -66,6 +66,7 @@ export const Head = ({ data: { markdownRemark: post } }) => {
     <Seo
       title={post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
+      keywords={post.frontmatter.keywords}
     />
   )
 }
@@ -91,6 +92,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        keywords
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

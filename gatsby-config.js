@@ -19,7 +19,7 @@ module.exports = {
     siteUrl: `https://kevintech.ninja/`,
     social: {
       twitter: `kevin_tech`,
-      instagram: `kevin_tech`
+      instagram: `kevintech.ninja`
     },
   },
   plugins: [

@@ -1,6 +1,7 @@
 ---
 title: Bringing Lottie Animations to Oracle APEX with Custom Plugins
 date: "2024-08-25T21:46:37.121Z"
+keywords: ["oracle apex", "lottie", "animations", "web development", "mobile development"]
 ---
 
 Animations are a great way to enhance the user experience and make applications more engaging. Lottie, an animation file format developed by Airbnb, allows designers to create scalable, high-quality animations that can be easily integrated into web applications. In this tutorial, we'll explore how you can use the APEX Lottie Animation plugins to seamlessly integrate and control these animations within your Oracle APEX applications.
