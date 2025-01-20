@@ -13,13 +13,16 @@ module.exports = {
     blogTitle: `KevinTech's Blog`,
     author: {
       name: `Kevin Herrarte`,
+      email: `hello@kevintech.ninja`,
       summary: `a Software Engineer who loves to code every day.`,
     },
     description: `Software Engineer passionate about creating seamless user experiences through front-end and back-end development.`,
     siteUrl: `https://kevintech.ninja/`,
     social: {
       twitter: `kevin_tech`,
-      instagram: `kevintech.ninja`
+      instagram: `kevintech.ninja`,
+      github: `kevintech`,
+      linkedin: `kherrarte`,
     },
   },
   plugins: [
@@ -104,7 +107,7 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "KevinTech's Blog RSS Feed",
           },
         ],
       },

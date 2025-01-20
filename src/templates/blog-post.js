@@ -67,6 +67,7 @@ export const Head = ({ data: { markdownRemark: post } }) => {
       title={post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
       keywords={post.frontmatter.keywords}
+      datePublished={post.frontmatter.date}
     />
   )
 }

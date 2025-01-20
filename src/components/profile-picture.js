@@ -30,7 +30,7 @@ const ProfilePicture = () => {
 
   const image = getImage(data.avatar)
 
-  return <GatsbyImage image={image} alt={`test`} />
+  return <GatsbyImage image={image} alt={`Profile Picture`} />
   // return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
