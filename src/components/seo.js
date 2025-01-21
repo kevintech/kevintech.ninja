@@ -44,7 +44,6 @@ const Seo = ({ description, title, keywords, datePublished, children }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
   const avatarSrc = getSrc(avatar)
   const structuredData = {
     "@context": "https://schema.org",
@@ -87,7 +86,7 @@ const Seo = ({ description, title, keywords, datePublished, children }) => {
 
   return (
     <>
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <title>{title || site.siteMetadata.title}</title>
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={keywords && keywords.join(`, `)} />
       <meta property="og:title" content={title} />

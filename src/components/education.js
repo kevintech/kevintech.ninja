@@ -11,22 +11,34 @@ function Education() {
             Pluralsight Certificates Completed
           </span>
           <p className='education__certificates'>
-            <a href="/certifications/pluralsight-advanced-nodejs.pdf" target="_blank">Advanced Node.js</a>
-            <a href="/certifications/pluralsight-gs-reactjs.pdf" target="_blank">Basics React.js</a>
-            <a href="/certifications/pluralsight-design-patterns-javascript.pdf" target="_blank">Practical Design Patterns in
+            <a href="#" target="_blank">Advanced Node.js</a>
+            {/* /certifications/pluralsight-advanced-nodejs.pdf */}
+            <a href="#" target="_blank">Basics React.js</a>
+            {/* /certifications/pluralsight-gs-reactjs.pdf */}
+            <a href="#" target="_blank">Practical Design Patterns in
+              {/* /certifications/pluralsight-design-patterns-javascript.pdf */}
               Javascript</a>
-            <a href="/certifications/pluralsight-javascript-best-practices.pdf" target="_blank">Javascript Best Practices</a>
-            <a href="/certifications/pluralsight-csharp-fundamentals-vs2015.pdf" target="_blank">C# Fundamentals</a>
-            <a href="/certifications/pluralsight-understanding-machine-learning.pdf" target="_blank">Understanding Machine
+            <a href="#" target="_blank">Javascript Best Practices</a>
+            {/* /certifications/pluralsight-javascript-best-practices.pdf */}
+            <a href="#" target="_blank">C# Fundamentals</a>
+            {/* /certifications/pluralsight-csharp-fundamentals-vs2015.pdf */}
+            <a href="#" target="_blank">Understanding Machine
+              {/* /certifications/pluralsight-understanding-machine-learning.pdf */}
               Learning</a>
-            <a href="/certifications/pluralsight-gs-async-dotnet.pdf" target="_blank">Asynchronous Programming in .NET</a>
-            <a href="/certifications/pluralsight-developer-architect.pdf" target="_blank">Developer to Architect</a>
-            <a href="/certifications/pluralsight-flux-redux.pdf" target="_blank">Mastering Flux and Redux</a>
-            <a href="/certifications/pluralsight-service-worker.pdf" target="_blank">Building Offline Web Apps with Service
+            <a href="#" target="_blank">Asynchronous Programming in .NET</a>
+            {/* /certifications/pluralsight-gs-async-dotnet.pdf */}
+            <a href="#" target="_blank">Developer to Architect</a>
+            {/* /certifications/pluralsight-developer-architect.pdf */}
+            <a href="#" target="_blank">Mastering Flux and Redux</a>
+            {/* /certifications/pluralsight-flux-redux.pdf */}
+            <a href="#" target="_blank">Building Offline Web Apps with Service
+              {/* /certifications/pluralsight-service-worker.pdf */}
               Worker</a>
-            <a href="/certifications/pluralsight-progressive-web-app-fundamentals.pdf" target="_blank">Progressive Web App
+            <a href="#" target="_blank">Progressive Web App
+              {/* /certifications/pluralsight-progressive-web-app-fundamentals.pdf */}
               Fundamentals</a>
-            <a href="/certifications/pluralsight-google-analytics-creative-professionals.pdf" target="_blank">Google Analytics
+            <a href="#" target="_blank">Google Analytics
+              {/* /certifications/pluralsight-google-analytics-creative-professionals.pdf */}
               for Creative Professionals</a>
           </p>
         </li>

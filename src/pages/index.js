@@ -41,7 +41,7 @@ export default BlogIndex
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Hello World" keywords={[`kevintech`, `c#`, `javascript`, `react`, `react-native`, `plsql`, `oracle apex`, `software engineer`, `guatemala`]} />
+export const Head = () => <Seo keywords={[`kevintech`, `c#`, `javascript`, `react`, `react-native`, `plsql`, `oracle apex`, `software engineer`, `guatemala`, `texas`]} />
 
 export const pageQuery = graphql`
   {
