@@ -113,6 +113,19 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        serialize: ({ path }) => {
+          return {
+            url: path,
+            changefreq: `weekly`,
+            priority: 0.7,
+            lastmod: new Date().toISOString(),
+          };
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `KevinTech's Blog`,
