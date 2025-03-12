@@ -377,21 +377,21 @@ a:focus {
 }
 
 .hidden-mobile {
-  display: none;
+  display: none !important;
 }
 
 @media (min-width: 768px) {
   .hidden-mobile {
-    display: block;
+    display: block !important;
   }
 }
 
 .hidden-desktop {
-  display: block;
+  display: block !important;
 }
 
 @media (min-width: 768px) {
   .hidden-desktop {
-    display: none;
+    display: none !important;
   }
 }
