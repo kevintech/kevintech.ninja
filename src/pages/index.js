@@ -9,6 +9,7 @@ import ContactLinks from "../components/contact-links"
 import Skills from "../components/skills"
 import WorkExperience from "../components/work-experience"
 import Education from "../components/education"
+import KscopeBanner from "../components/kscope-banner"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = `Kevin Herrarte`
@@ -26,6 +27,7 @@ const BlogIndex = ({ data, location }) => {
         tools and processes contributing to the design and rollout of software applications.
       </p>
       <ContactLinks />
+      <KscopeBanner />
       <LatestNews />
       <Skills />
       <WorkExperience />

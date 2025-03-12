@@ -11,7 +11,7 @@ const BlogIndex = ({ data, location }) => {
 
   if (posts.length === 0) {
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout location={location} title={'siteTitle'}>
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -71,7 +71,7 @@ export default BlogIndex
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo />
+export const Head = ({ data: { site } }) => <Seo title={site.siteMetadata?.blogTitle} />
 
 export const pageQuery = graphql`
   {
