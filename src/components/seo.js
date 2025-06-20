@@ -59,7 +59,7 @@ const Seo = ({ description, title, keywords, datePublished, children }) => {
       "name": site.siteMetadata.author.name,
       "email": site.siteMetadata.author.email,
       "sameAs": [
-        `https://twitter.com/${site.siteMetadata.social?.twitter}`,
+        `https://x.com/${site.siteMetadata.social?.twitter}`,
         `https://github.com/${site.siteMetadata.social?.github}`,
         `https://www.linkedin.com/in/${site.siteMetadata.social?.linkedin}`,
         `https://instagram.com/${site.siteMetadata.social?.instagram}`,
@@ -92,6 +92,7 @@ const Seo = ({ description, title, keywords, datePublished, children }) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
+      <meta property="og:image" content={avatarSrc} />
       <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:creator"

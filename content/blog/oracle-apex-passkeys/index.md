@@ -1,7 +1,8 @@
 ---
-title: Unlock Passwordless Authentication in Oracle APEX with Passkeys
+title: Oracle APEX Passkeys: Passwordless Authentication Guide
+description: Learn how to implement FIDO2/WebAuthn passkeys in Oracle APEX for secure, passwordless authentication—step-by-step with PL/SQL and our custom APEX plugin.
 date: "2025-01-14T20:26:37.121Z"
-keywords: ["oracle apex", "webauthn", "passkeys", "passwordless authentication", "security", "biometrics"]
+keywords: ["oracle apex passkeys", "passwordless authentication", "apex webauthn", "passwordless login apex", "oracle apex security", "apex passkey plugin", "kevin herrarte"]
 ---
 
 Did you know that 81% of data breaches are caused by weak or stolen passwords? As developers, we've all faced the challenge of securing user authentication while maintaining a smooth user experience. Enter passkeys—the next generation of passwordless authentication built on the WebAuthn standard. This post explains how we implemented passkeys in Oracle APEX and introduces a custom plugin that makes integration seamless for developers.
@@ -320,7 +321,6 @@ This action verifies an existing passkey credential.
 
 This action checks if a user has registered passkeys.
 
-**Configuration Steps:**
 1. Create a Dynamic Action on page load
 2. Set Action: "Viscosity | Passwordless Authentication [Plug-In]"
 3. Set Action Type: "Check Enrollment Status"
