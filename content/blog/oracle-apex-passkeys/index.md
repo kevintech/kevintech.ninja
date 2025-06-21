@@ -1,6 +1,6 @@
 ---
-title: Oracle APEX Passkeys: Passwordless Authentication Guide
-description: Learn how to implement FIDO2/WebAuthn passkeys in Oracle APEX for secure, passwordless authentication—step-by-step with PL/SQL and our custom APEX plugin.
+title: "Oracle APEX Passkeys: Passwordless Authentication Guide"
+description: "Learn how to implement FIDO2/WebAuthn passkeys in Oracle APEX for secure, passwordless authentication—step-by-step with PL/SQL and our custom APEX plugin."
 date: "2025-01-14T20:26:37.121Z"
 keywords: ["oracle apex passkeys", "passwordless authentication", "apex webauthn", "passwordless login apex", "oracle apex security", "apex passkey plugin", "kevin herrarte"]
 ---
