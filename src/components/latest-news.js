@@ -53,7 +53,7 @@ function LatestNews() {
           )
         })}
       </ol>
-      <Link to="/blog/" className="all_posts_link">
+      <Link to="/blog/" className="all_posts_link gradient-button">
         See all posts
       </Link>
     </div>

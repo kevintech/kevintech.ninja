@@ -23,6 +23,7 @@
 .work_experience li > .work_experience__company {
   color: var(--color-primary, #209CEE);
   display: block;
+  font-weight: 500;
 }
 
 .work_experience li > .work_experience__date {

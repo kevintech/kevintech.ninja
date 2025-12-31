@@ -10,7 +10,7 @@
 
 .all_posts_link {
   background-color: var(--color-button);
-  border-radius: var(--spacing-2);
+  border-radius: var(--spacing-4);
   color: var(--color-button-accent);
   display: inline-block;
   font-family: var(--font-heading);

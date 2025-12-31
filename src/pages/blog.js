@@ -57,7 +57,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
-      <Link to="/" className="footer-link-home">
+      <Link to="/" className="footer-link-home gradient-button">
         ← Go Back
       </Link>
     </Layout>

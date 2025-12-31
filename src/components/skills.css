@@ -7,9 +7,9 @@
 }
 
 .skills > li {
-  background: var(--color-primary, #209CEE); 
+  background: var(--color-secondary); 
   border-radius: 3px;
-  color: white;
+  color: var(--color-secondary-foreground);
   display: inline-block;
   line-height: 1.85em;
   margin: 0em 0.5em 0.69em 0;
